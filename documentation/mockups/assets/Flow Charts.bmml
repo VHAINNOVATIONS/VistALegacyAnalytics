@@ -1,0 +1,201 @@
+<mockup version="1.0" skin="sketch" measuredW="713" measuredH="658" mockupW="677" mockupH="581">
+  <controls>
+    <control controlID="7" controlTypeID="__group__" x="96" y="121" w="176" h="109" measuredW="176" measuredH="109" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Start</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="176" h="62" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="7">
+          <controlProperties>
+            <shape>roundRect</shape>
+            <text>start</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="82" y="60" w="10" h="49" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="7">
+          <controlProperties>
+            <curvature>0</curvature>
+            <leftArrow>false</leftArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="8" controlTypeID="__group__" x="105" y="596" w="176" h="62" measuredW="176" measuredH="62" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>End</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="176" h="62" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="8">
+          <controlProperties>
+            <shape>roundRect</shape>
+            <text>end</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="10" controlTypeID="__group__" x="96" y="235" w="176" h="107" measuredW="176" measuredH="107" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Step</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="176" h="60" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="10">
+          <controlProperties>
+            <shape>rectangle</shape>
+            <text>Step</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="83" y="58" w="10" h="49" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="10">
+          <controlProperties>
+            <curvature>0</curvature>
+            <direction>bottom</direction>
+            <leftArrow>true</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="12" controlTypeID="__group__" x="96" y="352" w="176" h="109" measuredW="176" measuredH="109" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Input/Output</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="176" h="60" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="12">
+          <controlProperties>
+            <shape>parallelogram</shape>
+            <text>Input/Output</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="83" y="60" w="10" h="49" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="12">
+          <controlProperties>
+            <curvature>0</curvature>
+            <leftArrow>false</leftArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="15" controlTypeID="__group__" x="105" y="470" w="235" h="119" measuredW="235" measuredH="119" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Condition</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="176" h="72" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="15">
+          <controlProperties>
+            <shape>diamond</shape>
+            <text>Condition</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="83" y="70" w="10" h="49" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="15">
+          <controlProperties>
+            <curvature>0</curvature>
+            <direction>bottom</direction>
+            <leftArrow>true</leftArrow>
+            <rightArrow>false</rightArrow>
+            <text>Yes</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Arrow" x="176" y="31" w="59" h="10" measuredW="150" measuredH="100" zOrder="2" locked="false" isInGroup="15">
+          <controlProperties>
+            <curvature>0</curvature>
+            <direction>bottom</direction>
+            <leftArrow>false</leftArrow>
+            <text>No</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="18" controlTypeID="__group__" x="550" y="485" w="159" h="167" measuredW="159" measuredH="167" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Arrows%20%28Up%20Right%29</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="0" w="159" h="10" measuredW="150" measuredH="100" zOrder="0" locked="false" isInGroup="18">
+          <controlProperties>
+            <leftArrow>false</leftArrow>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="0" w="10" h="167" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="18">
+          <controlProperties>
+            <leftArrow>false</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="19" controlTypeID="__group__" x="550" y="304" w="163" h="169" measuredW="163" measuredH="169" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Arrows%20%28Down%20Right%29</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Arrow" x="4" y="159" w="159" h="10" measuredW="150" measuredH="100" zOrder="0" locked="false" isInGroup="19">
+          <controlProperties>
+            <curvature>-1</curvature>
+            <leftArrow>false</leftArrow>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="2" w="10" h="167" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="19">
+          <controlProperties>
+            <leftArrow>false</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="20" controlTypeID="__group__" x="383" y="484" w="159" h="167" measuredW="159" measuredH="167" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Arrows%20%28Up%20Left%29</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="0" w="159" h="10" measuredW="150" measuredH="100" zOrder="0" locked="false" isInGroup="20">
+          <controlProperties>
+            <leftArrow>true</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="148" y="0" w="11" h="167" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="20">
+          <controlProperties>
+            <leftArrow>false</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="21" controlTypeID="__group__" x="376" y="303" w="163" h="169" measuredW="163" measuredH="169" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Arrows%20%28Down%20Left%29</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Arrow" x="4" y="159" w="159" h="10" measuredW="150" measuredH="100" zOrder="0" locked="false" isInGroup="21">
+          <controlProperties>
+            <curvature>-1</curvature>
+            <leftArrow>true</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="153" y="2" w="10" h="167" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="21">
+          <controlProperties>
+            <leftArrow>false</leftArrow>
+            <rightArrow>false</rightArrow>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="22" controlTypeID="__group__" x="359" y="237" w="176" h="60" measuredW="176" measuredH="60" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Step%20%28No%20Arrow%29</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="176" h="60" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="22">
+          <controlProperties>
+            <shape>rectangle</shape>
+            <text>Step</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Title" x="36" y="77" w="-1" h="-1" measuredW="280" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Basic%20Flow%20Charting%20Symbol%20Library</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

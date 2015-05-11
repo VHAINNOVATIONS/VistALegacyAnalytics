@@ -1,0 +1,53 @@
+#analyze_container div.quad_div {float: left; width: 550px;}
+#analyze_container div.container {text-align: center; position: relative;}
+#analyze_container div.margin_container {margin: 5px;}
+#outer_div {position: relative; clear: both;}
+#reset_zoom_button {position: absolute; right: 20px; top: 46px; z-index: 10; display: none;}
+#timeline_div {height: 450px; clear: both;}
+#addfacet_select { width: 100% ;}
+.quad_table {width: 100%; border-collapse: collapse; table-layout: fixed;}
+.quad_div table.quad_table td {border: 1px solid #ccc; font-size: .8em; padding: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right;}
+.quad_div table.quad_table td:first-child {text-align: left;}
+.quad_div table.quad_table th {border: 1px solid #ccc; font-size: .8em; padding: 1px; overflow: hidden; text-overflow: ellipsis;}
+.quad_div table.quad_table th:first-child {width: 75px; vertical-align:bottom; text-align:center; }
+.quad_div table.quad_table th.vertical {width: 30px;}
+
+
+img.remove_facet { position: absolute; width: 15px; height: 15px; right: 5px; top: 7px; z-index: 20; visibility: hidden;}
+div.category h4:hover img.remove_facet {visibility: visible;}
+
+div.category h4 { position: relative; }
+
+.quad_table thead th {text-overflow: ellipsis;}
+
+/*
+this is now a text column
+#table_1 td:first-child {text-align: right;}
+*/
+
+.top-left-corner {
+    float: left;
+    margin-top: -1px;
+}
+
+ /*
+.rotate {
+    width: 140px;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+}
+*/

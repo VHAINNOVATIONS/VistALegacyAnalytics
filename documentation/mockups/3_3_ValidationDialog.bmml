@@ -1,0 +1,136 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1417" measuredH="809" mockupW="1378" mockupH="786">
+  <controls>
+    <control controlID="27" controlTypeID="__group__" x="39" y="41" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="27">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="0">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="0">
+                  <groupChildrenDescriptors>
+                    <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="0">
+                      <groupChildrenDescriptors>
+                        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="1024" h="768" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+                          <controlProperties>
+                            <bottomheight>26</bottomheight>
+                            <dragger>false</dragger>
+                            <text>IP%20401%3A%20%20View%20patient%20Doe%2C%20John%20M%20%28D3333%29</text>
+                            <topheight>26</topheight>
+                          </controlProperties>
+                        </control>
+                      </groupChildrenDescriptors>
+                    </control>
+                  </groupChildrenDescriptors>
+                </control>
+              </groupChildrenDescriptors>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::TextInput" x="138" y="105" w="833" h="-1" measuredW="79" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Button" x="986" y="105" w="-1" h="-1" measuredW="65" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::ComboBox" x="50" y="105" w="73" h="-1" measuredW="45" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="50" y="220" w="994" h="542" measuredW="200" measuredH="220" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>Allergy/Reaction%20%281%29%0AAppointments%20%2820%29%0AConsults%20%288%29%0ADemographics%20%281%29%0ADocuments%20%2814%29%0AEducation%20Topics%20%289%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::TextInput" x="57" y="141" w="988" h="-1" measuredW="358" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>D3333%20%20%20%20%20John%20M.%20Doe%20%20%20%20%201/1/1940-%20%20%20%20%20Male%20%20%20%20%20111-22-3333</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::DataGrid" x="184" y="235" w="853" h="512" measuredW="520" measuredH="83" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Class%2C%20Reaction%2C%20Comment%2C%20Ingredient%2C%20Entered%2C%20Facility%0AAntibiotic%2C%20Anaphyllaxis%2C%20Some%20clinician%20comments%2C%20Penicillin%2C%2012/4/78%2C%20SITE005%20%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::ComboBox" x="110" y="182" w="-1" h="-1" measuredW="119" measuredH="23" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>123.45%20Cancer</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="57" y="183" w="-1" h="-1" measuredW="55" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20tag%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::ComboBox" x="807" y="182" w="-1" h="-1" measuredW="238" measuredH="23" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Agent%20Exposure%20Cancer%20Task%20Force</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="386" y="183" w="-1" h="-1" measuredW="104" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20to%20collection%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::ButtonBar" x="51" y="73" w="1000" h="24" measuredW="648" measuredH="29" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Collections%2C%20Reports%2C%20Alerts%2CHelp%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2CAdmin</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::StickyNote" x="1069" y="23" w="348" h="250" measuredW="109" measuredH="123" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20tag%3A%0AUser%20can%20add%20tag%20and%20view%20existing%20ones.%20%20Tags%20saved%20if%20not%20already%20in%20tag%20list.%0A%20%0AAdd%20to%20collection%3A%0AUser%20can%20add%20to%20personal/shared%20collection%20and%20view%20existing%20collection%20assignments.%0A%20%0AView%20item%3A%0AUser%20can%20select%20a%20row%20in%20the%20grid%20and%20view%20the%20entire%20record%20entry%20for%20that%20row.</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Link" x="631" y="523" w="-1" h="-1" measuredW="94" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Validate%20record</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::StickyNote" x="1063" y="322" w="347" h="193" measuredW="109" measuredH="123" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Validation%3A%0AIf%20the%20user%20is%20in%20validation%20mode%2C%20the%20user%20can%20verify%20that%20all%20patient%20files%20were%20moved%20over%20by%20comparing%20counts%2C%20and%20verify%20chain-of-custody%20by%20comparing%20the%20values%20of%2010-20%20key%20fields%20selected%20from%20various%20parts%20of%20the%20patient%27s%20combined%20file.%20%20The%20user%20can%20also%20validate%20other%20parts%20of%20the%20patient%27s%20combined%20file%20by%20downloading%20the%20raw%20XML.</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Link" x="957" y="762" w="-1" h="-1" measuredW="94" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Validate%20record</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::ModalScreen" x="50" y="73" w="1001" h="704" measuredW="320" measuredH="240" zOrder="16" locked="false" isInGroup="-1"/>
+    <control controlID="56" controlTypeID="__group__" x="247" y="274" w="700" h="418" measuredW="700" measuredH="418" zOrder="17" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="700" h="418" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="56">
+          <controlProperties>
+            <text>Validate%20record%20</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="9" y="36" w="521" h="325" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="56">
+          <controlProperties>
+            <text>ID%3A%20%20D3333%0ASSN%3A%20%20111223333%0ADOB%3A%2011/22/3333%0AFull%20name%3A%20%20Doe%2C%20John%20M.%0AAllergy%20field%201%3A%0AAppointments%20field%201%3A%0AConsults%20field%201%3A%0AEducation%20topics%20field%201%3A%0A...%0A%20Vitals%20field%201%3A%0A%20%0A%20%0A%20%0A%20%0A%20</text>
+            <verticalScrollbar>true</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Link" x="623" y="368" w="-1" h="-1" measuredW="62" measuredH="21" zOrder="2" locked="false" isInGroup="56">
+          <controlProperties>
+            <text>View%20XML</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::TextArea" x="545" y="36" w="140" h="325" measuredW="200" measuredH="140" zOrder="3" locked="false" isInGroup="56">
+          <controlProperties>
+            <borderColor>16777215</borderColor>
+            <color>10898809</color>
+            <text>Appts%3A%208%09%09%0AConsults%3A%207%0ADocuments%3A%207%0AEducation%20topics%3A%202%0AExams%3A%201%0AFlags%3A%203%0AHealth%20factors%3A%203%09%0AImmunizations%3A%200%0AInsurance%20policies%3A3%0ALabs%3A%2010%0AMeds%3A%205%0AObservations%3A%208%0AProblems%3A%202%0AProcedures%3A%2012%0AProgress%20Notes%3A%204%0AReactions%3A%201%09%0ASkin%20tests%3A%201%09%09%0AVisits%3A%204%0AVitals%3A%208%09%09%09</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

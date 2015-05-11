@@ -1,0 +1,90 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="854" measuredH="549" mockupW="815" mockupH="508">
+  <controls>
+    <control controlID="27" controlTypeID="__group__" x="39" y="41" w="714" h="508" measuredW="714" measuredH="508" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="714" h="508" measuredW="714" measuredH="508" zOrder="0" locked="false" isInGroup="27">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="__group__" x="0" y="0" w="714" h="508" measuredW="714" measuredH="508" zOrder="0" locked="false" isInGroup="0">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="__group__" x="0" y="0" w="714" h="508" measuredW="714" measuredH="508" zOrder="0" locked="false" isInGroup="0">
+                  <groupChildrenDescriptors>
+                    <control controlID="0" controlTypeID="__group__" x="0" y="0" w="714" h="508" measuredW="714" measuredH="508" zOrder="0" locked="false" isInGroup="0">
+                      <groupChildrenDescriptors>
+                        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="714" h="508" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+                          <controlProperties>
+                            <bottomheight>26</bottomheight>
+                            <dragger>false</dragger>
+                            <text>IP%20401%3A%20%20Readmittance%20summary%20%28SITE001%20Pittsburgh%29</text>
+                            <topheight>26</topheight>
+                          </controlProperties>
+                        </control>
+                      </groupChildrenDescriptors>
+                    </control>
+                  </groupChildrenDescriptors>
+                </control>
+              </groupChildrenDescriptors>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::TextInput" x="138" y="105" w="525" h="-1" measuredW="79" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Button" x="670" y="105" w="-1" h="-1" measuredW="65" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::ComboBox" x="50" y="105" w="73" h="-1" measuredW="45" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::DataGrid" x="50" y="252" w="-1" h="-1" measuredW="511" measuredH="113" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ID%20v%2C%20Name%2C%201%20mon%2C%206%20mos%2C%2012%20mos%2C%20total%0AV6141%2C%20Alcholism%20in%20family%2C%2010%2C%2020%2C%2030%2C%2060%0AV6142%2C%20Substance%20abuse%20in%20family%2C%2015%2C%2020%2C%2029%2C%2064%0AV6149%2COther%20health%20problems%20within%20the%20family%2C%2010%2C%2037%2C%2040%2C%2087</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="50" y="141" w="-1" h="-1" measuredW="175" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20readmitted%20by%20facility</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::DataGrid" x="50" y="162" w="-1" h="-1" measuredW="341" measuredH="53" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ID%2C%20Name%2C%201%20mon%2C%206%20mos%2C%2012%20mos%2C%20total%0ASITE001%2C%20Pittsburgh%2C%2010%2C%2020%2C%2030%2C%2060</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="50" y="226" w="-1" h="-1" measuredW="232" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20readmitted%20by%20family%20risk%20factor</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::StickyNote" x="669" y="172" w="185" h="123" measuredW="109" measuredH="123" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Grid%20entries%20are%20drill-down%20links.%0ARisk%20factor%20entries%20link%20to%20risk%20factor%20summary%20page%0ANumbers%20link%20to%20result%20sets</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::DataGrid" x="50" y="398" w="406" h="121" measuredW="420" measuredH="157" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Age%20at%20%5Crdiagnosis%20v%2C%20White%2C%20Black%2C%20Hispanic%2C%20Asian/PI%2C%20Male%2C%20Female%0A18-24%2C%2012%2C%2034%2C%206%2C%202%2C%2078%2C%2022%0A25-30%2C%2011%2C%2029%2C%207%2C%202%2C%2085%2C%2015%0A31-40%2C%2014%2C%2044%2C%206%2C%202%2C%2077%2C%2023%0A41-50%2C%208%2C%2057%2C%206%2C%202%2C%2097%2C%203</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="50" y="372" w="-1" h="-1" measuredW="218" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20readmitted%20by%20demographics</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::ButtonBar" x="51" y="73" w="683" h="24" measuredW="648" measuredH="29" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Collections%2C%20Reports%2C%20Alerts%2CHelp%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2CAdmin</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

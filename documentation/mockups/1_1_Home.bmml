@@ -1,0 +1,69 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1166" measuredH="592" mockupW="1126" mockupH="554">
+  <controls>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="139" y="104" w="524" h="-1" measuredW="129" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Enter%20search%20terms</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="670" y="104" w="-1" h="-1" measuredW="65" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::ComboBox" x="51" y="104" w="73" h="-1" measuredW="45" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::ButtonBar" x="51" y="73" w="683" h="24" measuredW="648" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Collections%2C%20Reports%2C%20Alerts%2CHelp%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2CAdmin</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="__group__" x="40" y="38" w="709" h="554" measuredW="709" measuredH="554" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="709" h="554" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>IP%20401%3A%20%20Home</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::List" x="51" y="146" w="215" h="126" measuredW="100" measuredH="126" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>Alerts%20%28%21%29%0ADiabetes%20%28189%29%20%28%21%29%0AMetabolic%20syndrome%20%2810212%29%0A%20...%0ASee%20all...</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::List" x="51" y="428" w="215" h="126" measuredW="100" measuredH="126" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>Collections%20%28%21%29%0ADiabetes%20research%20for%20March%20%28189%29%20%28%21%29%0AMental%20health%20task%20force%20%2810218%29%0A%20...%0ASee%20all...</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::List" x="51" y="287" w="215" h="126" measuredW="100" measuredH="126" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>Saved%20searches%0ADiabetes%20complications%20%281292%29%0A%20...%0ASee%20all...</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::List" x="281" y="146" w="448" h="126" measuredW="100" measuredH="126" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>Favorites%0AHomelessness%0A%20...%0ASee%20all...</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::List" x="281" y="287" w="448" h="266" measuredW="100" measuredH="254" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <text>Discover%0ADigestive%20disorders%20%283881910%29%0AMental%20disorders%20%28133829%29%0AIEDs%20and%20limb%20replacement%20%28124332%29%0AHomeless%20%28123442%29%0ADiabetes%20%28122221%29%0ACongenital%20Anomalies%20%2823201%29%0A...%0ASee%20all...%0A%20%0A%20%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::StickyNote" x="772" y="73" w="394" h="176" measuredW="109" measuredH="123" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*%20Alerts%20are%20saved%20searches%20that%20alert%20user%20when%20new%20matches%20are%20detected%0A*%20Collections%20are%20groups%20of%20records%20that%20the%20user%20manually%20saves%20and%20shares%0A*%20Favorites%20are%20summary%20screens%20for%20diagnoses%20and%20other%20dimensions%0A*%20%22Discover%22%20represents%20tags%20that%20other%20users%20have%20applied%20to%20records%2C%20allowing%20the%20user%20to%20browse%20by%20areas%20of%20common%20interest</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

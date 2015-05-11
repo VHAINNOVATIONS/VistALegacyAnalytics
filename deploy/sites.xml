@@ -1,0 +1,49 @@
+<site-data xmlns="ns://va.gov/2012/ip401/sites"
+           xmlns:geo="http://marklogic.com/geocode">
+<!--
+    This XML describes the active sites,
+    including maturity and facility geolocation.
+-->
+
+  <site id="TEST" mature="true">
+    <!-- These locations are mostly random. -->
+    <location id="CAMP MASTER" geo:lat="31.82978" geo:lon="-81.17022"/>
+    <location id="ABILENE (CAA)" geo:lat="30.7103" geo:lon="-82.2897"/>
+    <location id="TROY" geo:lat="32.608014" geo:lon="-80.391986"/>
+    <location id="FT. LOGAN" geo:lat="39.648897" geo:lon="-105.042181"/>
+    <location id="CENTRAL CITY (CCC)" geo:lat="30.70648" geo:lon="-82.29352"/>
+    <location id="LUBBOCK (CDD)" geo:lat="33.566389" geo:lon="-101.886667"/>
+    <location id="BOCA RATON (CEE)" geo:lat="31.8522" geo:lon="-81.1478"/>
+    <location id="CHAMPAIGN (CFF)" geo:lat="32.8067" geo:lon="-80.1933"/>
+    <location id="YUMA  (CGG)" geo:lat="30.1193" geo:lon="-82.8807"/>
+    <location id="LAREDO (CHH)" geo:lat="34.2043" geo:lon="-78.7957"/>
+    <location id="JAMESTOWN (CJJ)" geo:lat="30.9401" geo:lon="-82.0599"/>
+    <location id="SOUTH BEND (CKK)" geo:lat="33.47872" geo:lon="-79.52128"/>
+    <location id="LYNCHBURG (CLL)" geo:lat="30.05221" geo:lon="-82.94779"/>
+    <location id="ALEXANDRIA, LA (VAMC)" geo:lat="32.7774" geo:lon="-80.2226"/>
+    <location id="K&amp;R CONSULTING (100)" geo:lat="30.08969" geo:lon="-82.91031"/>
+    <location id="SOFTWARE SERVICE" geo:lat="30.97456" geo:lon="-82.02544"/>
+    <location id="ANYWHERE VAMC" geo:lat="31.55608" geo:lon="-81.44392"/>
+    <location id="CHARLESTON (CBB)" geo:lat="34.7808" geo:lon="-78.2192"/>
+    <location id="PARK CITY  (CII)" geo:lat="32.52801" geo:lon="-80.47199"/>
+    <location id="ASPEN (CMM)" geo:lat="31.54384" geo:lon="-81.45616"/>
+    <location id="TOGUS VAMROC" geo:lat="30.28303" geo:lon="-82.71697"/>
+    <location id="XXXYYY HOSP" geo:lat="34.48664" geo:lon="-78.51336"/>
+  </site>
+
+  <site id="per" mature="true">
+    <location geo:lat="35.874937" geo:lon="-78.585555" id="ZZ PERRY POINT" />
+    <location geo:lat="38.551253" geo:lon="-76.053243" id="ZZ CAMBRIDGE" />
+  </site>
+
+ <site id="fth" mature="true">
+    <location geo:lat="39.1983333" geo:lon="-76.4436111" id="ZZ FORT HOWARD"/>
+ </site>
+
+ <site id="tus" mature="true">
+    <location geo:lat="32.443998" geo:lon="-85.711126" id="Tuskegee, AL"/>
+    <location geo:lat="32.443998" geo:lon="-85.711126" id="MEDICAL DISTRICT 3"/>
+
+ </site>
+
+</site-data>

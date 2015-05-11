@@ -1,0 +1,10 @@
+div.dataTables_paginate,div.dataTables_filter,div.dataTables_length,.web-interface,div.col2,div.search,div.user,div.dataTables_processing {display: none !important; float: none;}
+html,body,div.colmask,div.colmid {width: 100%; margin: 0; padding: 0; float: none;}
+
+div.quad_div, div.quad_div div {float: none; width: 100%; border: none; display: inline-block; margin: 0; padding: 0;}
+
+div.outer_div {float: none; width: 100%;}
+
+table.quad_table td, table.quad_table th {font-size: .5em; text-overflow: ellipsis;}
+
+table.quad_table {width: 500px; table-layout: auto;}

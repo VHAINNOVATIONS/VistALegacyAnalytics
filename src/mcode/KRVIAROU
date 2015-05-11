@@ -1,0 +1,553 @@
+Cache for UNIX^INT^1APR13 ROUTINES^~Format=Cache.S~^RAW
+%RO on 30 Mar 2013   1:09 PM
+KRSANXML^INT^1^62813,39535^0
+KRSANXML ; 999/LDV-Sanitize XML Output
+ ;;1.0;VISTA ANALYTICS;;Nov 04, 2012;Build 6
+ ;;(c) 2012 - K&R Consulting Inc., All rights reserved.
+ ;
+ Q  ; Enter properly
+ ;
+EN N X,Y,Z,WRITE  K I S $P(I,"x",100)="x",GG=""
+ S WRITE="S ^TMP(""VPR"",$J,X,Y)=KRDTA"
+ F X=0:0 S X=$O(^TMP("VPR",$J,X)) Q:X=""!(+X=0)  DO
+ .F Y=0:0 S Y=$O(^TMP("VPR",$J,X,Y)) Q:Y=""  DO
+ ..S KRDTA=$G(^TMP("VPR",$J,X,Y)) Q:KRDTA=""
+ ..I KRDTA?1"<address streetLine1=".E DO  Q
+ ...S KRDTA="<address streetLine1='123 ANYWHERE DR' city='NEW CITY' stateProvince='NEW JERSEY' postalCode='12345--123' />"
+ ...X WRITE
+ ..I KRDTA["<facility code=",KRDTA["latestDate",KRDTA["domain=" DO  Q
+ ...S KRDTA="<facility code='999' name='ANYWHERE VAMC' latestDate='3071218' domain='VISTA.ANYWHERE.MED.VA.GOV' />" X WRITE Q
+ ..I KRDTA?1"<telecom usageType='WP'".E DO  Q
+ ...S KRDTA="<telecom usageType='WP' value='(888)888-8888' />" X WRITE
+ ..I KRDTA?1"<telecom usageType='H'".E S KRDTA="<telecom usageType='H' value='(899)899-9899' />" X WRITE Q
+ ..I KRDTA?1"<collected value=".E S KRDTA="<collected value='9999999.999999' />" X WRITE Q
+ ..I KRDTA?1"<ssn value=".E S KRDTA="<ssn value='999999999'/>" X WRITE Q
+ ..I KRDTA?1"<resulted value=".E S KRDTA="<resulted value='9999999.999999' />" X WRITE Q
+ ..I KRDTA?1"<groupName value=".E S KRDTA="<groupName value='XX 0000 99' />" X WRITE Q
+ ..I KRDTA?1"<localName value=".E S KRDTA="<localName value='XXX' />" X WRITE Q
+ ..I KRDTA?1"<bid value=".E S KRDTA="<bid value='Z9999' />" X WRITE Q
+ ..I KRDTA?1"<facility code=".E S KRDTA="<facility code='999' name='ANYWHERE VAMC'/>" X WRITE Q
+ ..I KRDTA?1"<location value=".E S KRDTA="<location value='ANY PC TEAM - DR. ANYONE'/>" X WRITE Q
+ ..I KRDTA?1"<location code=".E S KRDTA="<location code='888' name='WARD 99'/>" X WRITE Q
+ ..I KRDTA?1"<provider code=".E S KRDTA="<provider code='12345' name='PROVIDER,DOROTHY P'/>" X WRITE Q
+ ..I KRDTA?1"<service value=".E S KRDTA="<service value='BEST CARE SERVICE LINE'/>" X WRITE Q
+ ..I KRDTA?1"<died value".E S KRDTA="<died value='9999999' />" X WRITE Q
+ ..I KRDTA["<clinician code="&(KRDTA["name=")&(KRDTA["role=")&(KRDTA'["signature") DO  Q
+ ...S KRDTA="<clinician code='777' name='HOLSTONE,RHETA K' role='A' />" X WRITE
+ ..I KRDTA["<clinician code="&(KRDTA["name=")&(KRDTA["role=")&(KRDTA["dateTime=")&(KRDTA["signature=") DO  Q
+ ...S KRDTA="<clinician code='555' name='SANDBAR,JESSICA R' role='S' dateTime='9999999.999999' signature='JESSICA R SANDBAR, NA' />" X WRITE 
+ ..I KRDTA?1"<currentProvider code=".E S KRDTA="<currentProvider code='99999' name='PROVIDER,MELVIN X' />" X WRITE Q
+ ..I KRDTA?1"<comment id=".E DO  Q
+ ...S KRDTA="<comment id='1' entered='XXX XX, XXXX' enteredBy='PROVIDER,MARTHA Z' commentText='comment text removed'/>" X WRITE
+ ..I KRDTA?1"<comment xml:space".E S KRDTA="<comment xml:space='preserve'>comment text removed </comment>" X WRITE Q
+ ..I KRDTA?1"<orderingProvider code=".E S KRDTA="<orderingProvider code='11111' name='PROVIDER,ROBERT L'/>" X WRITE Q
+ ..I KRDTA?1"<pharmacist code=".E S KRDTA="<pharmacist code='5555' name='PHARMACIST,ANY'/>" X WRITE Q
+ ..I KRDTA?1"<prescription value=".E S KRDTA="<prescription value='123456'/>" X WRITE Q
+ ..I KRDTA?1"<sig xml:space='preserve".E S KRDTA="<sig xml:space='preserve'>SIGS text removed</sig>" X WRITE Q
+ ..I KRDTA?1"<orderingProvider code=".E S KRDTA="<orderingProvider code='12689' name='PROVIDER,ANY P'/>" X WRITE Q
+ ..I KRDTA?1"<ptInstructions xml:space='preserve".E DO  Q
+ ...S KRDTA="<ptInstructions xml:space='preserve'>Pt instructions text removed</ptInstructions>" X WRITE
+ ..I KRDTA?1"<prescription value=".E S KRDTA="<prescription value='12345DB'/>" X WRITE Q
+ ..I KRDTA?1"<orderID value=".E S KRDTA="<orderID value='123456789'/>" X WRITE Q
+ ..I KRDTA?1"<id value=".E S KRDTA="<id value='999999'/>" X WRITE Q
+ ..I KRDTA?1"<dob value=".E S KRDTA="<dob value='9999999'/>" X WRITE Q
+ ..I KRDTA?1"<icn value=".E S KRDTA="<icn value='999999999'/>" X WRITE Q
+ ..I KRDTA?1"<lrdfn value=".E S KRDTA="<lrdfn value='9999999'/>" X WRITE Q
+ ..I KRDTA?1"<stopCode name=".E S KRDTA="<stopCode name='ANY INTERNAL MEDICINE' code='999'/>" X WRITE Q
+ ..I KRDTA?1"<type name=".E S KRDTA="<type name='ANY CLINIC VISIT'/>" X WRITE Q
+ ..I KRDTA?1"<specialty value=".E S KRDTA="<specialty value='ANY SPECIALTY' />" X WRITE Q
+ ..I KRDTA?1"<reason code=".E S KRDTA="<reason code='999.9' name='XXXXXXX' narrative='XXXXX XXXXXXXXX XXX' />" X WRITE Q
+ ..I KRDTA?1"<visitString value=".E S KRDTA="<visitString value='999;9999999.9999;R' />" X WRITE Q
+ ..I KRDTA?1"<stopCode code=".E S KRDTA="<stopCode code='999' name='ANY STOP CODE' />" X WRITE Q
+ ..I KRDTA?1"<dateTime value=".E S KRDTA="<dateTime value='9999999.9999' />" X WRITE Q
+ ..I KRDTA?1"<familyName value=".E S KRDTA="<familyName value='LASTNAME' />" X WRITE Q
+ ..I KRDTA?1"<fullName value=".E S KRDTA="<fullName value='LASTNAME,FIRSTNAME MI' />" X WRITE Q
+ ..I KRDTA?1"<taken value=".E S KRDTA="<taken value='9999999.9999' />" X WRITE Q
+ ..I KRDTA?1"<entered value=".E S KRDTA="<entered value='9999999.999999' />" X WRITE Q
+ ..I KRDTA?1"<approvedBy".E S KRDTA="<approvedBy code='999999' name='PERSON,ANY 0' />" X WRITE Q
+ ..I KRDTA?1"<assigned value=".E S KRDTA="<assigned value='9999999.999999' />" X WRITE Q
+ ..I KRDTA?1"<category value=".E S KRDTA="<category value='ANY CATEGORY' />" X WRITE Q
+ ..I KRDTA?1"<document code=".E S KRDTA="<document code='999999999' name='ANY DOCUMENT NAME' />" X WRITE Q
+ ..I KRDTA?1"<id value=".E S KRDTA="<id value='9999~9;KRKR(99.99,' />" X WRITE Q
+ ..I KRDTA?1"<name value=".E S KRDTA="<name value='ANY NAME VALUE' />" X WRITE Q
+ ..I KRDTA?1"<origSite code=".E S KRDTA="<origSite code='9999' name='ANY VAMC FACILITY' />" X WRITE Q
+ ..I KRDTA?1"<ownSite code=".E S KRDTA="<ownSite code='9999' name='ANY VAMC FACILITY' />" X WRITE Q
+ ..I KRDTA?1"<reviewDue value=".E S KRDTA="<reviewDue value='9999999' />" X WRITE Q
+ ..I KRDTA?1"<type value=".E S KRDTA="<type value='ANY TYPE VALUE' />" X WRITE Q
+ ..I KRDTA?1"<requested value=>".E S KRDTA="<requested value='9999999.999999' />" X WRITE Q
+ ..I KRDTA?1"<category code=".E S KRDTA="<category code='999999999' name='ANY NAME VALUE' />" X WRITE Q
+ ..I KRDTA?1"<givenNames value=".E S KRDTA="<givenNames value='NAME,ANY GIVEN' />" X WRITE Q
+ ..I KRDTA?1"<encounter value=".E S KRDTA="<encounter value='9999999' />" X WRITE Q
+ ..I KRDTA?1"<test value=".E S KRDTA="<test value='TEST NAME' />" X WRITE Q
+ ..I KRDTA?1"<support contactType=".E S KRDTA="<support contactType='ECON' name='LASTNAME,FIRSTNAME,MI' relationship='XXXXX' >" X WRITE Q
+ ..I KRDTA["<content "&(KRDTA["</content>") Q
+ ..I KRDTA?1"<content ".E DO  Q
+ ...N G,H F G=Y:0 S G=$O(^TMP("VPR",$J,X,G)) Q:G=""!(+G=0)  DO 
+ ....S KRDTA1=$G(^TMP("VPR",$J,X,G)) Q:KRDTA1=""
+ ....I KRDTA1?1"</content>".E S G=9999999999999 Q
+ ....Q:KRDTA1["Interdisciplinary Note"
+ ....Q:KRDTA1["LOCAL TITLE"
+ ....Q:KRDTA1["STANDARD TITLE"
+ ....I KRDTA1["DATE OF NOTE"&(KRDTA1["ENTRY DATE") S KRDTA1="DATE OF NOTE: XXX XX, 9999@99:99     ENTRY DATE: XXX XX, 9999@99:99",^TMP("VPR",$J,X,G)=KRDTA1 Q
+ ....S H=$TR(KRDTA1,"abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",I)
+ ....S H=$TR(H,"!@#$%^&*()_+=-:;'<,>.?/{}|\[]","")
+ ....F XX=1:1:$L(H) I $A($E(H,XX,XX))<32!($A($E(H,XX,XX))>126) S $E(H,XX,XX)=""
+ ....S ^TMP("VPR",$J,X,G)=H K H
+ ;
+EXIT Q
+
+KRVPRD^INT^1^62775,63762^0
+KRVPRD ;999/LDV-Front end for data extraction
+ ;;1.0;VISTA ANALYTICS;;Nov 04, 2012
+ ;;(c) 2012 - K&R Consulting Inc., All rights reserved.
+ ;
+ Q  ; Enter properly
+ ;
+GET(VPR,DFN,TYPE,START,STOP,MAX,ID,FILTER) ; -- Return search results as XML in @VPR@(n) 
+ N ICN,VPRI,VPRTOTL,VPRTEXT
+ S VPR=$NA(^TMP("VPR",$J,(DFN+109632))) K @VPR
+ S FILTER("text")=1 ; Force text return for notes, etc
+ S VPRTEXT=+$G(FILTER("text")) ;include report/document text
+ ;
+ ; parse & validate input parameters
+ S ICN=+$P($G(DFN),";",2),DFN=+$G(DFN),ID=$G(ID)
+ I DFN<1,ICN S DFN=+$$GETDFN^MPIF001(ICN)
+ S TYPE=$$LOW^XLFSTR($G(TYPE)) I TYPE="" S TYPE=$$ALL
+ I TYPE'="new",DFN<1!'$D(^DPT(DFN)) D ERR(1,DFN) G GTQ
+ S:'$G(START) START=1410102 S:'$G(STOP) STOP=4141015 S:'$G(MAX) MAX=9999
+ I START,STOP,STOP<START N X S X=START,START=STOP,STOP=X ;switch
+ I STOP,$L(STOP,".")<2 S STOP=STOP_".24"
+ I ID="",$D(FILTER("id")) S ID=FILTER("id")
+ ;
+ ; extract data
+ N VPRTYPE,VPRP,VPRHDR,VPRTAG,VPRTN
+ S VPRTYPE=TYPE D ADD("<results version='1.1' timeZone='"_$$TZ^XLFDT_"' >")
+ F VPRP=1:1:$L(VPRTYPE,";") S VPRTAG=$P(VPRTYPE,";",VPRP) I $L(VPRTAG) D
+ . S VPRTN="EN^"_$$RTN(.VPRTAG) Q:'$L($T(@VPRTN))  ;D ERR(2) Q
+ . D ADD("<"_VPRTAG) S VPRHDR=VPRI,VPRTOTL=0
+ . D @(VPRTN_"(DFN,START,STOP,MAX,ID)")
+ . S @VPR@(VPRHDR)=@VPR@(VPRHDR)_" total='"_+$G(VPRTOTL)_"' >" D ADD("</"_VPRTAG_">")
+ D ADD("</results>")
+ ;
+GTQ ; end
+ Q
+ ;
+RTN(X) ; -- Return name of VPRDxxxx routine for clinical domain X
+ ; X is also enforced as expected group tag name, if passed by ref
+ N Y S Y="VPRD",X=$G(X) I X="" Q Y
+ I X["accession"    S Y="VPRDLRA",X="accessions"
+ I X["allerg"       S Y="VPRDGMRA",X="reactions"
+ I X["appointment"  S Y="VPRDSDAM",X="appointments"
+ I X["clinicalProc" S Y="VPRDMC",X="clinicalProcedures"
+ I X["consult"      S Y="VPRDGMRC",X="consults"
+ I X["demograph"    S Y="VPRDPT",X="demographics"
+ I X["document"     S Y="VPRDTIU",X="documents"
+ I X["factor"       S Y="VPRDPXHF",X="healthFactors"
+ I X["flag"         S Y="VPRDGPF",X="flags"
+ I X["immunization" S Y="VPRDPXIM",X="immunizations"
+ I X["skin"         S Y="VPRDPXSK",X="skinTests"
+ I X?1"exam".E      S Y="VPRDPXAM",X="exams"
+ I X["educat"       S Y="VPRDPXED",X="educationTopics"
+ I X["insur"        S Y="VPRDIB",X="insurancePolicies"
+ I X["polic"        S Y="VPRDIB",X="insurancePolicies"
+ I X["lab"          S Y="VPRDLR",X="labs"
+ I X["panel"        S Y="VPRDLRO",X="panels"
+ I X["med"          S Y="VPRDPS",X="meds"
+ I X["pharm"        S Y="VPRDPSOR",X="meds"
+ I X["observ"       S Y="VPRDMDC",X="observations"
+ I X["order"        S Y="VPRDOR",X="orders"
+ I X["patient"      S Y="VPRDPT",X="demographics"
+ I X["problem"      S Y="VPRDGMPL",X="problems"
+ I X["procedure"    S Y="VPRDPROC",X="procedures"
+ I X["reaction"     S Y="VPRDGMRA",X="reactions"
+ I X["surg"         S Y="VPRDSR",X="surgeries"
+ I X["visit"        S Y="VPRDVSIT",X="visits"
+ I X["vital"        S Y="VPRDGMV",X="vitals"
+ I X["rad"          S Y="VPRDRA",X="radiologyExams"
+ I X["xray"         S Y="VPRDRA",X="radiologyExams"
+ I X["new"          S Y="VPRDX",X="patients"
+ Q Y
+ ;
+TAG(X) ; -- return plural name for group tags
+ N Y S:X'?1.L X=$$LOW^XLFSTR(X)
+ I $E(X,$L(X))="s" S Y=X
+ I $E(X,$L(X))="y" S Y=$E(X,1,$L(X)-1)_"ies"
+ E  S Y=X_"s"
+ Q Y
+ ;
+ALL() ; -- return string for all types of data
+ Q "demographics;reactions;problems;vitals;labs;meds;immunizations;observation;visits;appointments;documents;procedures;consults;flags;factors;skinTests;exams;education;insurance;orders"
+ ;
+ERR(X,VAL) ; -- return error message
+ N MSG S MSG="Error"
+ I X=1 S MSG="Patient with dfn '"_$G(VAL)_"' not found"
+ I X=2 S MSG="Requested domain type '"_$G(VAL)_"' not recognized"
+ I X=99 S MSG="Unknown request"
+ ;
+ D ADD("<error>")
+ D ADD("<message>"_MSG_"</message>")
+ D ADD("</error>")
+ Q
+ ;
+ESC(X) ; -- escape outgoing XML
+ ; Q $ZCONVERT(X,"O","HTML") ; uncomment for fastest performance on Cache
+ ;
+ N I,Y,QOT S QOT=""""
+ S Y=$P(X,"&") F I=2:1:$L(X,"&") S Y=Y_"&amp;"_$P(X,"&",I)
+ S X=Y,Y=$P(X,"<") F I=2:1:$L(X,"<") S Y=Y_"&lt;"_$P(X,"<",I)
+ S X=Y,Y=$P(X,">") F I=2:1:$L(X,">") S Y=Y_"&gt;"_$P(X,">",I)
+ S X=Y,Y=$P(X,"'") F I=2:1:$L(X,"'") S Y=Y_"&apos;"_$P(X,"'",I)
+ S X=Y,Y=$P(X,QOT) F I=2:1:$L(X,QOT) S Y=Y_"&quot;"_$P(X,QOT,I)
+ Q Y
+ ;
+ADD(X) ; Add a line @VPR@(n)=X
+ S VPRI=$G(VPRI)+1
+ S @VPR@(VPRI)=X
+ Q
+ ;
+STRING(ARRAY) ; -- Return text in ARRAY(n) or ARRAY(n,0) as a string
+ N I,X,Y S Y=""
+ S I=+$O(ARRAY("")) I I=0 S I=+$O(ARRAY(0))
+ S Y=$S($D(ARRAY(I,0)):ARRAY(I,0),1:$G(ARRAY(I)))
+ F  S I=$O(ARRAY(I)) Q:I<1  D
+ . S X=$S($D(ARRAY(I,0)):ARRAY(I,0),1:ARRAY(I))
+ . I $E(X)=" " S Y=Y_$C(13,10)_X Q
+ . S Y=Y_$S($E(Y,$L(Y))=" ":"",1:" ")_X
+ Q Y
+ ;
+FAC(X) ; -- return Institution file station# for location X
+ N HLOC,FAC,Y0,Y S Y=""
+ S HLOC=$G(^SC(+$G(X),0)),FAC=$P(HLOC,U,4)
+ ; Get P:4 via Med Ctr Div, if not directly linked
+ I 'FAC,$P(HLOC,U,15) S FAC=$$GET1^DIQ(44,+$G(X)_",","3.5:.07","I")
+ S Y0=$S(FAC:$$NS^XUAF4(FAC),1:$P($$SITE^VASITE,U,2,3)) ;name^stn#
+ S:$L(Y0) Y=$P(Y0,U,2)_U_$P(Y0,U) ;switch to stn#^name
+ I $L(Y),'Y S $P(Y,U)=FAC
+ Q Y
+ ;
+VUID(IEN,FILE) ; -- Return VUID for item
+ Q $$GET1^DIQ(FILE,IEN_",",99.99)
+ ;
+VERSION(RET) ; -- Return current version of data extracts
+ S RET="1.01"
+ Q
+
+KRVPRDGO^INT^1^62870,69140.045202^0
+KRVPRDGO ; 999/LDV-Legacy VistA Data Extraction
+ ;;1.0;VISTA ANALYTICS;;Nov 04, 2012
+ ;;(c) 2012 - K&R Consulting Inc., All rights reserved.
+ ;
+ S IOP="HOME" D ^%ZIS K IOP
+ S SAVERR="W !!,$C(7),""Incorrect directory format."",!! H 2"
+ ; The command line will be 'F DFN=9649:0 S DFN=$O(^DPT(DFN)) Q:+DFN=0!(DFN>9651) S FILTER("text")=1 D GET^KRVPRD("",DFN,"","","",99999,"",.FILTER)'
+EN W @IOF,"Local Data Extraction",!!! D DT^DICRW
+ W "Enter the BEGINNING DFN: " R KRBEGDFN:DTIME G:'$T!(KRBEGDFN=U)!(KRBEGDFN="") EXIT
+ I KRBEGDFN'=+KRBEGDFN W $C(7),!!,"Invalid input",! H 2 G EN
+ I KRBEGDFN'?1.999N W !!,$C(7),"You must enter only numeric values.",!! H 2 G EN
+ ;
+EDFN W !,"   Enter the ENDING DFN: " R KRENDDFN:DTIME G:'$T!(KRENDDFN=U)!(KRENDDFN="") EXIT
+ I KRENDDFN'=+KRENDDFN W $C(7),!!,"Input error.",!! H 2 G EDFN
+ I KRENDDFN'?1.999N W !!,$C(7),"You must enter only numeric values.",!! H 2 W !! G EDFN
+ I KRENDDFN<KRBEGDFN W $C(7),!!,"Starting DFN is after ending DFN.",! H 2 G EN
+ W !!,"I will report DFNs ",KRBEGDFN," to ",KRENDDFN,!!,"Is this OK" S %=2 D YN^DICN I %'=1 G EN
+ S KRSAVDIR="" W !!,"Do you want to save to an XML file" S %=2 D YN^DICN I %'=1 G DEV
+ S KRSANITZ=2 W !,"Do you want to sanitize the data" S %=2 D YN^DICN S KRSANITZ=% I %<0 G EXIT
+ ;
+SAVDIR W !!,"Enter the directory for saving the XML file.",!,"This will be used exactly as entered.",!!,"Directory name:  " R KRSAVDIR:DTIME G:'$T!(KRSAVDIR[U) EXIT
+ S KROS=$$OS^%ZOSV
+ I KROS["VMS",KRSAVDIR'?1.10A1"$:["1.20A1"]" X SAVERR G SAVDIR
+ I KROS["NT",KRSAVDIR'?1.2A1":\"1.20A0.1"\" X SAVERR H 2 G SAVDIR
+ ;
+DEV W !! S %ZIS="AEQ" D ^%ZIS G:POP EXIT
+ I $D(IO("Q")) DO  G EXIT
+ .S ZTIO=ION,ZTRTN="GO^KRVPRDGO",ZTSAVE("KR*")="",ZTDESC="Legacy VistA Data Extraction, DFN "_KRBEGDFN_" to DFN "_KRENDDFN
+ .D ^%ZTLOAD W:$D(ZTSK) !!,"Your task number: ",ZTSK,!! H 2
+ ;
+GO S KRRECCNT=0
+ S X="NOW",%DT="ST" D ^%DT S KRSTRTTM=Y
+ F XDFN=(KRBEGDFN-1):0 S XDFN=$O(^DPT(XDFN)) Q:XDFN=""!(+XDFN=0)!(XDFN>KRENDDFN)  DO
+ .D KILL S FILTER("text")=1 D GET^KRVPRD("",XDFN,"","","",9999999,"",.FILTER)
+ .S KRRECCNT=KRRECCNT+1
+ .I +$G(KRSANITZ)=1 D EN^KRSANXML ; Sanitization of ^TMP
+ .D CTRLCLN ; Clean control characters and non-English characters
+ .I KRSAVDIR="" Q
+ .;
+FCOPY .; Write the XML file out to disk with a unique name
+ .H .6 ; Hang to insure unique time
+ .S X="NOW",%DT="TS" D ^%DT S Y=$TR(Y,".",""),NOW=Y
+ .D OPEN^%ZISH("VPRCOPY",KRSAVDIR,(XDFN+109632)_"-"_NOW_".xml","W")
+ .I POP G EXIT
+ .S FDFN=0,FDFN=$O(^TMP("VPR",$J,FDFN)) Q:FDFN=""  ; for killng ^TMP
+ .U IO F X=0:0 S X=$O(^TMP("VPR",$J,X)) Q:X=""!(+X=0)  DO
+ ..F Y=0:0 S Y=$O(^TMP("VPR",$J,X,Y)) Q:Y=""  W ^TMP("VPR",$J,X,Y),!
+ .D CLOSE^%ZISH("VPRCOPY")
+ .K ^TMP("VPR",$J) ; Kill any nodes associated with this job
+ S X="NOW",%DT="ST" D ^%DT S KRENDTM=Y
+ U IO W @IOF,!,"Data Extraction Statistics",!!
+ W "START time: " S Y=KRSTRTTM X ^DD("DD") W Y,!
+ W "  End time: " S Y=KRENDTM X ^DD("DD") W Y,!!
+ W "Number of DFNs processed: ",KRRECCNT,!!
+ N YY W "Elapsed time: " S X1=KRENDTM,X2=KRSTRTTM,X3=3 S YY=0,YY=$$FMDIFF^XLFDT(X1,X2,X3)
+ N A,B,C,D,E,F,G,H,AVGMIN
+ S AA=$P(YY,":"),A=$P(AA," "),B=$P(AA," ",2),C=$P(YY,":"),D=$P(YY,":",2),E=$P(YY,":",3)
+ W A," days, ",B," hours, ",$P(YY,":",2)," minutes, ",$P(YY,":",3)," seconds",!!
+ S F=A*86400,G=C*3600,H=D*60
+ S AVGMIN=$J(((F+G+H+E)/60/KRRECCNT),5,2) W !,"Average minutes per record: ",AVGMIN,!
+ ;
+EXIT D ^%ZISC,KILL
+ K XDFN,KRBEGDFN,KRSTRTTM,KRENDTM,KRRECCNT,KRSAVDIR,KRENDDFN,KRSANITZ
+ K %,%DT,%ZIS,ZTIO,ZTRTN,ZTSAVE,ZTDESC,ZTSK,DFN,CLK,CLN,DGPTDAT,I,FDFN,LNCT,LSTDS,LSTFD,LSTRD,MW
+ K ND2P5,OERR,ORDIALOG,PSSDIY,RACNI,RAMDIV,RAWHOVER,RNWDT,RX2,Y,Y15,SAVERR,X1,X2,X3
+ Q
+ ;
+KILL K ^TMP("VPR",$J),AA,GG,FILTER,NOW,POP,TOTLN,XX,KRDTA,KRDTA1,KROS,%I,%Y,BLK,CDT,CV,D0,DIQ2,FILTER,GMRCDA,GMRCGRP,GMRCSEX,LCNT
+ K SHD,TAB,TITLE,TIUFPRIV,VACNTRY,VAERR,VALMCNT,VPRCNT,W,X,DRG,INS1,FL,G,GMRCNUL
+ Q
+ ;
+CTRLCLN ;Clean up data
+ N XXXDFN S XXXDFN=XDFN+109632
+ F G=0:0 S G=$O(^TMP("VPR",$J,XXXDFN,G)) Q:G=""!(+G=0)  DO 
+ .S H=$G(^TMP("VPR",$J,XXXDFN,G)) Q:H=""
+ .F XX=1:1:$L(H) I $A($E(H,XX,XX))<32!($A($E(H,XX,XX))>126) S $E(H,XX,XX)=""
+ .S ^TMP("VPR",$J,XXXDFN,G)=H K H
+ Q
+
+KRVSXML^INT^1^62886,64833.018723^0
+KRVSXML ; Local/LD-VistA XML Data Generator [3-05-2013]
+ ;;5.0;VISTA ANALYTICS;;Mar 05, 2013
+ ;
+ S IOP="HOME" D ^%ZIS K IOP S X=$T(+2),X=$P(X,";;",2),VERS=$P(X,";"),KRHDR="VistA XML Data Generator version "_VERS
+EN W @IOF,KRHDR,!!! D DT^DICRW
+ S DIC=1,DIC(0)="AEQM",DIC("A")="Enter the file name or number: " D ^DIC G:Y<0 EXIT S (KRFIL,KRFILBK)=+Y,KRFILNM=$P(Y,U,2)
+ ;
+BIEN W !!,"Select the ",KRFILNM," beginning IEN: " R KRBGIEN:DTIME G:'$T!(KRBGIEN="") EXIT G:KRBGIEN=U EN
+ I KRBGIEN'?1.999N W !!,$C(7),"You must enter only numeric values.",!! H 2 G BIEN
+ ; 
+EIEN W !?6,"And the ",KRFILNM," ending IEN: " R KRENIEN:DTIME G:'$T EXIT G:KRENIEN=U BIEN G:KRENIEN="" BIEN
+ I KRBGIEN'?1.999N!(KRENIEN'?1.999N) W !!,$C(7),"You must enter only numeric values.",!! H 2 W !! G EIEN
+ I KRENIEN<KRBGIEN W $C(7),!!,"Starting IEN is after the ending IEN.",! H 2 G BIEN
+ W !!,"I will report IENs ",KRBGIEN," to ",KRENIEN,!!,"Is this OK" S %=1 D YN^DICN I %'=1 G EN
+ S (%,KRINDFL)=2 I KRBGIEN'=KRENIEN W !!,"Do you want individual files for each IEN" D YN^DICN G:%<1 EXIT S KRINDFL=%
+ S (%,KRREPNL)=2 W !!,"Do you want to report null data values" D YN^DICN G:%<1 EXIT S KRREPNL=%
+ W !!,"Enter the file name prefix: " R KRFILPR:DTIME I '$T!(KRFILPR[U) G EXIT
+ ;
+SAVDIR S KRPREDR=$G(^DISV(DUZ,"VISTAXML"))
+ W @IOF,!,"Directory to Save the Files",!!!!!,"Enter the path and directory for the XML file.",!!,"Directory path/name: "_KRPREDR_"// "
+ R KRSVDIR:DTIME G:'$T!(KRSVDIR[U) EXIT
+ I KRSVDIR="",$G(KRPREDR)]"" S KRSVDIR=KRPREDR
+ S KRERRR="W !!,$C(7),""Incorrect directory format."" H 2 G SAVDIR"
+  S KROS=$$OS^%ZOSV DO
+ .I KROS["VMS",KRSVDIR'?1.10A1"$:["1.20A1"]".E X KRERRR
+ .I KROS["UNIX",KRSVDIR'?1"/"1.20A.E X KRERRR
+ .I KROS["NT",KRSVDIR'?1A1":\"1.20A.E X KRERRR
+ S KRPREDR=$TR(KRPREDR," *'!@#$%^&*()+=-:;""""?/>.<,","")
+ I KRSVDIR]"" S ^DISV(DUZ,"VISTAXML")=KRSVDIR
+ ;
+DEV W !! S %ZIS="AEQ" D ^%ZIS G:POP EXIT
+ I $D(IO("Q")) DO  G EXIT
+ .S ZTIO=ION,ZTRTN="GO^KRVSXML",ZTSAVE("KR*")="",ZTDESC=KRHDR
+ .D ^%ZTLOAD W:$D(ZTSK) !!,"Your task number: ",ZTSK,!! H 2
+ ;
+GO ;S X="ERR^ZU" S @^%ZOSF("TRAP"),ZTRAP="ZU" ; Uses Kernel error trap
+ ; Comment out above line and uncomment next line for custom error trapping
+ S X="ERROR",ERRCNT=0 K ERRORS S @^%ZOSF("TRAP"),ZTRAP="CUSTOM" ; Custom error trap
+ D DT^DICRW S KRSITNAM=^DD("SITE"),KRSITNUM=^DD("SITE",1),X=+$G(^XMB(1,1,0)),KRDOMNM=$P($G(^DIC(4.2,X,0)),U)
+ S KRDIVNM=$P($G(^DG(40.8,1,0)),U) K KRIDLN
+ S KRIDLN="Site Name='"_KRSITNAM_"' FacilityNumber='"_KRSITNUM_"' Division='"_KRDIVNM
+ S KRIDLNA="File number='"_KRFILBK_"' Name='"_KRFILNM
+ K ERRORS S KRRECCT=0,ERRCNT=0,X="NOW",%DT="ST" D ^%DT S KRSTRTM=Y
+ S KRDTATP=$S(KRREPNL=2:"EN",1:"E"),KRA1="<!",KRA2="[",KRA3="]",KRCDATA=KRA1_KRA2_"CDATA"_KRA2,KRCEND=KRA3_KRA3_">"
+ S KRXIEN=KRBGIEN,KRDIC=$G(^DIC(KRFILBK,0,"GL")) ;file global root
+ I $G(KRDIC)=""  DO  G EXIT
+ .W !!,$C(7),"Cannot determine the ",KRFILBK," file global root. Stopping.",!! H 2
+ .S ERRCNT=$G(ERRCNT)+1,ERRORS(ERRCNT)=KRFILBK_" global root look-up/set error"
+ I KRINDFL=2 DO  G:POP EXIT ;Individual files NO
+ .D OPEN^%ZISH("KRVSXML",KRSVDIR,KRFILPR_"_"_KRBGIEN_"_"_KRENIEN_".XML","W")
+ .I POP W $C(7),!,"Cannot open the host file for IEN ",KRXIEN,".",! S ERRCNT=$G(ERRCNT)+1,ERRORS(ERRCNT)="Host file open failure, IEN="_KRXIEN H 2 Q
+ .U IO W "<?xml version=""1.0"" encoding=""UTF-8""?>",!
+ .S KRIDLN=$TR(KRIDLN,"*!@#&$%^&*()+-:;""""?/><,","_________________________________")
+ .S KRFILNM=$TR(KRFILNM," *'!@#&$%^&*()+=-:;""""?/>.<,","_________________________________")
+ .W "<",KRFILNM,">",!,"<",KRIDLN,"' />",!,"<",KRIDLNA,"' />" U $P
+ G:POP EXIT S KRXIEN=KRXIEN-.1
+ ;
+GOA F KRXIEN=KRXIEN:0 S KRXIEN=$O(@(KRDIC_KRXIEN_")")) Q:KRXIEN=""!(KRXIEN>KRENIEN)!(+KRXIEN=0)  D KILL,GO1  Q:POP
+ U IO I KRINDFL=2 W "</",KRFILNM,">",!
+ I KRINDFL=2 D CLOSE^%ZISH("KRVSXML")
+ S X="NOW",%DT="ST" D ^%DT S KRENDTM=Y
+ U IO(0) W !!,KRHDR_" Statistics",!!
+ W "START time: " S Y=KRSTRTM X ^DD("DD") W Y,!
+ W " End time: " S Y=KRENDTM X ^DD("DD") W Y,!!
+ W "Records processed: ",KRRECCT,!!
+ W "Total errors: ",ERRCNT,!!
+ ;
+EXIT I $D(ERRORS) DO  ; Used only on custom error trapping
+ .W !!,"The following errors occurred:",!!
+ .F X=0:0 S X=$O(ERRORS(X)) Q:X=""  W ERRORS(X),!
+ D ^%ZISC,KILL
+ K %,%DT,%ZIS,KRDIC,KRDTA,KRDTATP,KRETYPE,KRFIL,KRFILBK,KRFILNM,KRFILPR,KRFLD,KRFLD1,KRFLD1
+ K H,DA,LN,KROFLD,KRMULEN,KRMULST,POP,KRREPNL,KRSTYPE,KRTYPE,X,KRXIEN,Y,ZTDESC,ZTIO
+ K ZTRTN,ZTSAVE,ZTSK,KRZZ,KRZZ1,KRBGIEN,KRENIEN,KRENDTM,KRERRR,KRHDR,KROS,KRPREDR,KRRECCT,KRSVDIR
+ K KRSTRTM,%Y,DIERR,KRA1,KRA2,KRA3,KRCDATA,KRCEND,KRFLD2,ERRORS,KRINDEN,KRINDFL,KRINDST
+ K ORDER,DA,DIC,ERRCNT,KRDA,KRDIVNM,KRIDLN,KRIDLN1,KRSITNAM,KRSITNUM,KRDOMNM,KRDAZ,KRDAZ1,KRFILZ,KRFLDZ
+ K KRIENZ,NODE,NODEDZ,REC,VERS,CNT,LN,A,KRDAZ2,DAB1,DABN,L,L1,ZZY,ZTRAP,KRFLDST,KRIDLNA
+ Q
+ ;
+KILL K ^TMP("KRVSXML",$J),^TMP("ZKRVSXML",$J)
+ Q
+ ;
+GO1 S KRIENZ=KRXIEN_"," U $P D GETS^DIQ(KRFILBK,KRIENZ,"**",KRDTATP,"^TMP(""KRVSXML"",$J)") DO  Q:'$D(^TMP("KRVSXML",$J))  G:POP EXIT
+ .S KRRECCT=KRRECCT+1 D SORT
+ .I KRINDFL=1 DO  Q:POP
+ ..D OPEN^%ZISH("KRVSXML",KRSVDIR,KRFILPR_"_"_KRXIEN_".XML","W")
+ ..I POP W $C(7),!,"Cannot open the host file for IEN ",KRXIEN,".",! S ERRCNT=ERRCNT+1 S ERRORS(ERRCNT)="Host file open failure" H 2 Q
+ ..U IO W "<?xml version=""1.0"" encoding=""UTF-8""?>",!
+ ..S KRFILNM=$TR(KRFILNM," *'!@()#&$%^&*()+=-:;""""?/>.<,","_________________________________") W "<",KRFILNM,">",!
+ ..S KRIDLN=$TR(KRIDLN,"*!@()#&$%^&*()+-:;""""?/><,","_________________________________") W "<",KRIDLN,"' />",!
+ .;
+ .;Main file data
+ .U IO S (KRIDLN1,KRFLD,DA(1),DA(2))="",DA=KRXIEN
+ .F  S DA(1)=$O(^TMP("KRVSXML",$J,"B",DA,DA(1))) Q:DA(1)=""  DO
+ ..F KRFIL=0:0 S KRFIL=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL)) Q:KRFIL=""!(KRFIL>KRFILBK)  D INDSTRT DO
+ ...F  S DA(2)=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2))) Q:DA(2)=""  DO
+ ....F  S KRFLD=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2),KRFLD)) Q:KRFLD=""  DO
+ .....S KRFILZ=KRFIL,KRDAZ=DA,KRDAZ1=DA(1),KRDAZ2=DA(2),KRFLDZ=KRFLD
+ .....I $D(^TMP("KRVSXML",$J,"WP",KRDAZ,KRDAZ1,KRFILZ,KRDAZ2,KRFLDZ)) D WP Q
+ .....F REC=0:0 S REC=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2),KRFLD,REC)) Q:REC=""  DO
+ ......S KRDTA=$G(^TMP("KRVSXML",$J,REC,0)),KRDTA=$$SYMENC^MXMLUTL(KRDTA)
+ ......D LOWER S X="<"_KRFLD1_" value= '"_KRDTA_"' />" W X,!
+ ;
+ ; Subfile data
+ U IO Q:'$D(^TMP("KRVSXML",$J))  S DA=KRXIEN,(KRFLD,DA(1),DA(2))="",KROFLD="ZZZZ"
+ F  S DA(1)=$O(^TMP("KRVSXML",$J,"B",DA,DA(1))) Q:DA(1)=""  DO
+ .F KRFIL=KRFILBK:0 S KRFIL=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL)) D:KRFIL]"" STYPE Q:KRFIL=""  DO
+ ..F  S DA(2)=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2))) D:DA(2)="" ETYPE Q:DA(2)=""  DO
+ ...D CHLDSTRT
+ ...F  S KRFLD=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2),KRFLD)) D:KRFLD="" CHLDEND Q:KRFLD=""  DO
+ ....S KROFLD=KRFLD,KRFILZ=KRFIL,KRDAZ=DA,KRDAZ1=DA(1),KRDAZ2=DA(2),KRFLDZ=KRFLD
+ ....I $D(^TMP("KRVSXML",$J,"WP",KRDAZ,KRDAZ1,KRFILZ,KRFLDZ)) D WP Q
+ ....F REC=0:0 U IO S REC=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2),KRFLD,REC)) Q:REC=""  DO
+ .....S KRDTA=$G(^TMP("KRVSXML",$J,REC,0)),KRDTA=$$SYMENC^MXMLUTL(KRDTA)
+ .....D LOWER S X="<"_KRFLD1_" value= '"_KRDTA_"' />" W X,! U IO(0)
+ D:KRFIL=""&(KRINDFL=2) INDEND
+ I KRINDFL=1 D INDEND W "</",KRFILNM,">",!
+ I KRINDFL=1 D CLOSE^%ZISH("KRVSXML")
+ Q
+ ;
+LOWER ; Convert to lower case and clean up
+ S KRFLD1=$P($G(^DD($P(KRFIL,","),KRFLD,0)),"^") Q:KRFLD1=""
+ I $E(KRFLD1,1)="#" S $E(KRFLD1,1)="Number"
+ I $E(KRFLD1,1)="$" S $E(KRFLD1,1)="Dollar"
+ ;
+LOWER1 I $E(KRFLD1)=" " S $E(KRFLD1)=""
+ S KRFLD2="",KRFLD1=$TR(KRFLD1,"/-."," ")
+ S KRFLD1=$TR(KRFLD1,"#()*'!@&$%^&*{}[]|+=:;?><""""|/\","__________________________________")
+ S KRFLD1=$TR(KRFLD1,",","") ; Remove __ that sometime occurs
+ S X=$L(KRFLD1) I $E(KRFLD1,X,X)="_" S $E(KRFLD1,X,X)=""
+ F KRZZ=1:1 S KRZZ1=$P(KRFLD1," ",KRZZ) Q:KRZZ1=""  DO
+ .S KRZZ1=$TR(KRZZ1,"ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz")
+ .S X=$E(KRZZ1) X ^%ZOSF("UPPERCASE") S $E(KRZZ1,1,1)=Y,KRFLD2=KRFLD2_KRZZ1
+ I KRFLD2?1N.E S KRFLD2="Fld_"_KRFLD2
+ S KRFLD1=KRFLD2
+ Q
+ ;
+STYPE ; Get subfield name
+ N X S (KRSTYPE,KRTYPE)=""
+ S X=$P(^DD($P(KRFIL,","),0),"^"),KRTYPE=$P(X," SUB-FIELD") Q:KRTYPE=""
+ I KRTYPE?1N.E S KRTYPE="Fld"_KRTYPE ; Can't have only numbers or numbers/letters
+ S (KRFLD2,KRZZ1)=""
+ S KRZZ1=$TR(KRTYPE," *'!@()#$&%^&*{}[]+=-:;""""?/\>.<","_________________________________")
+ S KRZZ1=$TR(KRZZ1,",","") ; Remove __ that sometime occurs
+ S X=$L(KRZZ1) I $E(KRZZ1,X,X)="_" S $E(KRZZ1,X,X)=""
+ S KRTYPE=KRZZ1,KRSTYPE="<"_KRTYPE_">",KRETYPE="</"_KRTYPE_">"
+ W KRSTYPE,!
+ Q
+ ;
+ETYPE ; Write end type
+ W KRETYPE,!
+ Q
+ ;
+CHLDSTRT ; Start a child field by getting the field name.  If it has a .001 field use that one.
+ ; Otherwise use the .01 field.
+ N KRFLD,KRFLD1
+ S (KRMULST,KRMULEN)=""
+ N X S X=0 I $G(^DD($P(KRFIL,","),.001,0))]"" S X=1,KRFLD=.001
+ I X=0 S KRFLD=.01
+ S KRFLD1="" D LOWER S Y=KRFLD1
+ S KRMULST="<"_Y_">",KRMULEN="</"_Y_">"
+ ; This works with code in CHLDEND to determine whether to start another child field or
+ ; to continue on with a field the same (i.e. .01) that was just printed.
+ I $D(NEXFLD),KROFLD'="ZZZZ",NEXFLD=KROFLD Q
+ W KRMULST,!
+ Q
+ ;
+CHLDEND ; End a child field
+ ; The next five lines serve to put .01 fields (of a multiple field that has only this field) together and not
+ ; to list them individually.  It does not affect any other fields.
+ K NEXDA2,NEXFLD,NEXNUL S (NEXFLD,NEXNUL)=""
+ S NEXDA2=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,DA(2))) ; what is the next DA(2)?
+ I NEXDA2]"" S NEXFLD=$O(^TMP("KRVSXML",$J,"B",DA,DA(1),KRFIL,NEXDA2,NEXNUL)) ; what is the next field? Is it the same as the previous?
+ I NEXFLD]"",KROFLD=NEXFLD,KROFLD'="ZZZZ" Q
+ K NEXDA2,NEXNUL
+ W KRMULEN,!
+ Q
+ ;
+INDSTRT ;Individual file start ; get the file name
+ N KRFLD,KRFLD1
+ S KRFLD1=$P(^DD(KRFILBK,.01,0),U) D LOWER1 S Y=KRFLD1
+ ; Add key field data line
+ S KRINDST="<"_Y_">",KRINDEN="</"_Y_">"
+ W KRINDST,!
+ I KRFILBK'=45&(KRFILBK'=396.2) S KRIDLN1="Key Field='.01' RecNum='"_KRXIEN_"' FieldData='"_$P(@(KRDIC_KRXIEN_",0)"),U)_"'"
+ I KRFILBK=45!(KRFILBK=396.2) S KRIDLN1="Key Field='.01' RecNum='"_KRXIEN_"' PatientDfn='"_$P(@(KRDIC_KRXIEN_",0)"),U)_"'" ; PTF/AMIT report files only ; can add others
+ S KRIDLN1=$TR(KRIDLN1,"*!@()#&$%^&*+-:;""""?/><,","_________________________________")
+ W "<",KRIDLN1,"/>",!
+ Q
+ ;
+INDEND ; Individual record end
+ Q:'$D(KRINDEN)
+ W KRINDEN,!
+ Q
+ ;
+ERROR ; Error trapping and recording
+ S ERRCNT=ERRCNT+1
+ I KRINDFL=1 D CLOSE^%ZISH("KRVSXML") ; Close the current file
+ S ERRORS(ERRCNT)=$ZE
+ G GOA
+ ;
+SORT ; Sort the raw FM data into a usable file format
+ N KRFILE,KRFIELD,KRDA,KRDTA,KREN,KRRECCT,G,G1
+ K ^TMP("ZKRVSXML",$J) S KRRECCT=0
+ F KRFILE=0:0 S KRFILE=$O(^TMP("KRVSXML",$J,KRFILE)) Q:KRFILE=""  S KREN=""  F  S KREN=$O(^TMP("KRVSXML",$J,KRFILE,KREN)) Q:KREN=""  DO
+ .S KRFIELD=""  F  S KRFIELD=$O(^TMP("KRVSXML",$J,KRFILE,KREN,KRFIELD)) Q:KRFIELD=""  DO
+ ..S DABN="",CNT=0 F G=1:1 S G1=$P(KREN,",",G) Q:G1=""  S CNT=CNT+1,DABN(CNT)=G1
+ ..Q:CNT=0  S DAB1="" F G=CNT:-1:1 S DAB1=DAB1_DABN(G)_","
+ ..S DA=$P(DAB1,","),DA(1)=$P(DAB1,",",2),DA(2)=$P(DAB1,",",3,9999)
+ ..F X=1,2 I DA(X)="" S DA(X)="0"
+ ..I $G(^TMP("KRVSXML",$J,KRFILE,KREN,KRFIELD,"E"))["^TMP(""KRVSXML"""  DO  Q
+ ...F LN=0:0 S LN=$O(^TMP("KRVSXML",$J,KRFILE,KREN,KRFIELD,LN)) Q:LN=""!(+LN=0)  DO
+ ....S KRRECCT=KRRECCT+1,KRDTA=$G(^TMP("KRVSXML",$J,KRFILE,KREN,KRFIELD,LN))
+ ....S ^TMP("ZKRVSXML",$J,"WP",DA,DA(1),KRFILE,DA(2),KRFIELD,KRRECCT,0)=KRDTA
+ ....S ^TMP("ZKRVSXML",$J,"B",DA,DA(1),KRFILE,DA(2),KRFIELD,KRRECCT)="" Q
+ ..S KRRECCT=KRRECCT+1,KRDTA=$G(^TMP("KRVSXML",$J,KRFILE,KREN,KRFIELD,"E"))
+ ..S ^TMP("ZKRVSXML",$J,KRRECCT,0)=KRDTA,^TMP("ZKRVSXML",$J,"B",DA,DA(1),KRFILE,DA(2),KRFIELD,KRRECCT)=""
+ K ^TMP("KRVSXML",$J) M ^TMP("KRVSXML",$J)=^TMP("ZKRVSXML",$J) K ^TMP("ZKRVSXML",$J)
+ Q
+ ;
+WP ; Display word processing subfiles
+ S KRFLD1=$P($G(^DD($P(KRFIL,","),KRFLDZ,0)),"^") Q:KRFLD1=""
+ I $E(KRFLD1)=" " S $E(KRFLD1)=""
+ S KRFLD1=$TR(KRFLD1," #*'!@()&$%^&*{}[]|+=:;?><""""|/\","__________________________________")
+ S KRFLD1=$TR(KRFLD1,",","") ; Remove __ that sometimes occurs
+ S X=$L(KRFLD1) I $E(KRFLD1,X,X)="_" S $E(KRFLD1,X,X)=""
+ I KRFLD1?1N.E S KRFLD1="Fld_"_KRFLD1
+ S KRFLDST=KRFLD1 W "<",KRFLDST,">",! DO
+ .D LOWER W "<",KRFLD1,">",!,KRCDATA,!
+ .F LN=0:0 S LN=$O(^TMP("KRVSXML",$J,"WP",KRDAZ,KRDAZ1,KRFILZ,KRDAZ2,KRFLDZ,LN)) Q:LN=""!(+LN=0)  DO
+ ..S KRDTA=$G(^TMP("KRVSXML",$J,"WP",KRDAZ,KRDAZ1,KRFILZ,KRDAZ2,KRFLDZ,LN,0)),KRDTA=$$SYMENC^MXMLUTL(KRDTA)
+ ..W KRDTA,!
+ .W KRCEND,!
+ W "</"_KRFLD1_">",!,"</",KRFLDST,">",!
+ Q
+
+
+

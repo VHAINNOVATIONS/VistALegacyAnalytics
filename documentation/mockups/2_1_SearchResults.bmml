@@ -1,0 +1,105 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1358" measuredH="804" mockupW="1318" mockupH="768">
+  <controls>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextInput" x="144" y="102" w="836" h="-1" measuredW="65" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>mycoses</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="988" y="102" w="-1" h="-1" measuredW="65" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::ComboBox" x="56" y="102" w="73" h="-1" measuredW="45" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="__group__" x="40" y="36" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="22">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="0">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="0">
+                  <groupChildrenDescriptors>
+                    <control controlID="0" controlTypeID="__group__" x="0" y="0" w="1024" h="768" measuredW="1024" measuredH="768" zOrder="0" locked="false" isInGroup="0">
+                      <groupChildrenDescriptors>
+                        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="1024" h="768" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+                          <controlProperties>
+                            <text>IP%20401%3A%20%20Search%20results%20%28mycoses%29</text>
+                          </controlProperties>
+                        </control>
+                      </groupChildrenDescriptors>
+                    </control>
+                  </groupChildrenDescriptors>
+                </control>
+              </groupChildrenDescriptors>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::ButtonBar" x="51" y="73" w="1002" h="24" measuredW="648" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Collections%2C%20Reports%2C%20Alerts%2CHelp%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2CAdmin</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::DataGrid" x="60" y="189" w="466" h="121" measuredW="420" measuredH="157" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Age%20at%20%5Crdiagnosis%20%5E%2C%20White%2C%20Black%2C%20Hispanic%2C%20Asian/PI%2C%20Male%2C%20Female%0A18-24%2C%2012%2C%2034%2C%206%2C%202%2C%2078%2C%2022%0A25-30%2C%2011%2C%2029%2C%207%2C%202%2C%2085%2C%2015%0A31-40%2C%2014%2C%2044%2C%206%2C%202%2C%2077%2C%2023%0A41-50%2C%208%2C%2057%2C%206%2C%202%2C%2097%2C%203</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="60" y="163" w="-1" h="-1" measuredW="152" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20by%20demographics</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="558" y="189" w="466" h="121" measuredW="513" measuredH="113" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Code%2C%20Description%2C%20White%2C%20Black%2C%20Hispanic%2C%20Asian/PI%2C%20Male%2C%20Female%0A291.0%2C%20Alcoholic%20psychosis%2C%2012%2C%2034%2C%206%2C%202%2C%2078%2C%2022%0A292.1%2C%20Drug%20psychosis%2C%2011%2C%2029%2C%207%2C%202%2C%2085%2C%2015%0A427.5%2C%20Cardiac%20arrest%2C14%2C%2044%2C%206%2C%202%2C%2077%2C%2023</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="558" y="163" w="170" h="21" measuredW="138" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20by%20comorbidity</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::DataGrid" x="60" y="351" w="466" h="121" measuredW="483" measuredH="113" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ID%2C%20Class%2C%20White%2C%20Black%2C%20Hispanic%2C%20Asian/PI%2C%20Male%2C%20Female%0A101.1%20-%20101.10%2C%20SSRI%2C%2012%2C%2034%2C%206%2C%202%2C%2078%2C%2022%0A102.1%20-%20102.7%2C%20TCA%2C%2011%2C%2029%2C%207%2C%202%2C%2085%2C%2015%0A103.1%20-%20103.3%2C%20MAOI%2C%2014%2C%2044%2C%206%2C%202%2C%2077%2C%2023</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="60" y="325" w="-1" h="-1" measuredW="88" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20by%20Rx</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::DataGrid" x="558" y="351" w="466" h="121" measuredW="513" measuredH="113" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Code%2C%20Description%2C%20White%2C%20Black%2C%20Hispanic%2C%20Asian/PI%2C%20Male%2C%20Female%0A291.0%2C%20Alcoholic%20psychosis%2C%2012%2C%2034%2C%206%2C%202%2C%2078%2C%2022%0A292.1%2C%20Drug%20psychosis%2C%2011%2C%2029%2C%207%2C%202%2C%2085%2C%2015%0A427.5%2C%20Cardiac%20arrest%2C14%2C%2044%2C%206%2C%202%2C%2077%2C%2023</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="558" y="325" w="274" h="21" measuredW="258" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patients%20by%20outcome%20%28within%205yr%20of%20diagnosis%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::StickyNote" x="1046" y="157" w="312" h="123" measuredW="109" measuredH="123" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tables%20display%20key%20analytical%20data%20about%20the%20result%20set.%0AUser%20can%20click%20on%20the%20numbers%20%28counts%29%20in%20order%20to%20view%20actual%20result%20records.</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::LineChart" x="60" y="535" w="964" h="131" measuredW="187" measuredH="175" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="60" y="505" w="-1" h="-1" measuredW="139" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Patient%20records%20by%20time</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

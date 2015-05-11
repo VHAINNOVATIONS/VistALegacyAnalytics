@@ -1,0 +1,95 @@
+.ui-tabs .ui-tabs-nav li.ui-tabs-active { background-color: #fff !important;}
+
+#patient_container {margin: 10px; position: relative;}
+#demos_table {width: 60em; margin-left: 5px;}
+#demos_table td span {font-weight: bold; padding-right: 1px;}
+#patient_infobar {border: 1px solid #aaa; margin-bottom: 10px;}
+#content_wrapper {float: left; width: 100%;}
+#content_panel {margin-left: 205px;}
+#data_selector {display: block; width: 205px; float: left; margin-left: -100%; background-color: #ccc; height: 100%; z-index: 2; position: relative;}
+#data_selector ul {padding-left: .5em;}
+.horz_tab {z-index: 0; min-height: 450px; overflow: hidden; display: none; position: relative;}
+.horz_tab ul {position: relative;}
+#data_selector ul li {border: 1px solid #ccc; display: block; list-style-type: none; clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; padding-bottom: 0; padding-top: 0;}
+#data_selector ul li.active {background-color: white; border: 1px solid #aaa; border-right: 1px solid #fff;}
+#data_selector ul a {display: block; color: #222; text-decoration: none; padding: .5em;}
+#data_selector ul span {display: block; color: #bbbbbb; text-decoration: none; padding: .5em; font-style: italic;}
+
+table {border-collapse: collapse;}
+.data_table {width: 100%; font-size: 10pt;}
+
+.export_button {position: absolute; right: 1em; top: 0;}
+
+#export_dialog {display: none;}
+#content_dialog {display: none;}
+#content_dialog p {white-space: pre-wrap;}
+
+ul.xml_tree h3 {margin: 0; padding: 0;}
+ul.xml_tree li {list-style-type: none; padding-left: 2em;}
+ul.xml_tree {padding-left: 0;}
+ul.xml_tree ul {padding-left: 0;}
+
+#timeline_table {display: none;}
+
+.reportHeader {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.fieldLabel {
+    font-weight: bold;
+}
+
+.demographicsFieldLabel  {
+    font-weight: bold;
+}
+
+#demographics_data {
+  text-align: left;
+}
+
+#demographics_data tr td {
+    padding: 0px 0px 0px 9px;
+}
+
+#demographics_data tr td:first-child {
+  width: 175px;
+  text-align: right;
+  padding-left: 0px;
+}
+
+.ad-fieldLabel {
+    font-weight: bold;
+}
+
+#admissionsDischargeData {
+    text-align: left;
+}
+
+#admissionsDischargeData tr td {
+    padding: 0px 0px 0px 9px;
+}
+
+#admissionsDischargeData tr td:first-child {
+    width: 175px;
+    text-align: right;
+    padding-left: 0px;
+}
+
+
+
+/*css table*/
+#table {
+  display: table;
+  float: left;
+  padding-left: 15px;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding-bottom:25px
+}

@@ -1,0 +1,53 @@
+Cache for UNIX^INT^AFTER PER^~Format=Cache.S~^RAW
+%RO on 11 Jun 2013   2:04 PM
+KREXRACE^INT^1^62984,50435^0
+KREXRACE ;EXTRACT RACE DATA;CAH;28MAY2013 [5/30/13 12:45pm]
+S TOT=0,DFN="" K CAH S NOFILE=0
+R "EXTRACT FILE? ",ANS I ANS'="Y" G NOFILE
+R !,"OUTPUT FILE (ie /home/chuck/fth/upload/): ",FILE,!
+R !,"LOCATION: (ie fth):",LOC,!,"FILENAME (i.e. racedata.xml):",FNAME,!
+D OPEN^%ZISH("KRVSXML",FILE,FNAME,"W")
+U IO
+W "<patients>",!
+D LOOP
+W "</patients>",!
+D CLOSE^%ZISH("KREXRACE")
+U 0
+W "TOTAL RECORDS: ",TOT,!
+Q
+NOFILE ;
+S TOT=0,DFN="" K CAH S NOFILE=1
+D LOOP
+W !,"TOTAL RECORDS: ",TOT
+Q
+LOOP S DFN=$O(^DPT(DFN)) Q:DFN=""
+I DFN'?.N Q
+S TOT=TOT+1
+D DEM^VADPT S NAME=VADM(1),ETH=VADM(8)
+I ETH="" S ETH="NULL"
+S CAH(ETH)=$G(CAH(ETH))+1
+D RECORD
+G LOOP
+RECORD ;
+I NOFILE=1 Q
+I ETH="NULL" Q
+W "<patient>",!,"<dfn>",DFN,"</dfn>",!
+W "<site>",LOC,"</site>",!
+S CODE="",ABBR="" D CODE
+I $G(NO)=1 Q
+W "<races>",!,"<race"
+I ABBR'="" W " abbrev="_$C(34)_ABBR_$C(34)
+W " desc="_$C(34)_ETH_$C(34)_" >"_CODE_"</race>",!
+W "</races>",!
+W "</patient>",!
+Q
+CODE ;
+S ETH=$P(ETH,"^",2)
+I ETH["WHITE, NOT" S ABBR=6 Q
+I ETH["BLACK, NOT" S ABBR=4 Q
+I ETH["ASIAN OR PAC" S ABBR=5 Q
+I ETH["HISPANIC, BLACK" S ABBR=2 Q
+I ETH["UNKNOWN" S ABBR=7 Q
+I ETH["AMERICAN INDIAN OR ALASKA" S ABBR=3,CODE="1002-5" Q
+I ETH["HISPANIC, WHITE" S ABBR=1 Q
+Q
